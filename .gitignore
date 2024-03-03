@@ -1,2 +1,6 @@
 *.exe
 *.vscode
+*-arm64
+*.DS_Store
+!stockfish-windows-x86-64-avx2.exe
+!stockfish-arm64
