@@ -1,9 +1,10 @@
 *.exe
 *.vscode
-*-arm64
 *.DS_Store
 *.dat
 *.log
 *.out
+*-arm64
+./stockfish-get/src/tmp
 !stockfish-windows-x86-64-avx2.exe
 !stockfish-arm64

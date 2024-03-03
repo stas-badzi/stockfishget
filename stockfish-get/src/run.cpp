@@ -9,7 +9,7 @@
     #include <unistd.h>
     using namespace std;
     int main() {
-        execl("./stockfish-get/src/run-shellscript.sh","./stockfish-get/src/run-shellscript.sh",NULL);
+        execl("./stockfish-get/src/run-shell.sh","./stockfish-get/src/run-shell.sh",NULL);
         return 0;
     }
 #endif

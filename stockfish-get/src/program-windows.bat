@@ -1,12 +1,8 @@
-powershell
-
-./sendfish | Out-File ./logs/sendfish.log
+./sendfish > ./logs/sendfish.log
 ./progress
 
-Get-Content ./storage/input.dat | ./stockfish-windows/stockfish-windows-x86-64-avx2 | Out-File ./storage/output.dat
+./stockfish-windows/stockfish-windows-x86-64-avx2 < ./storage/input.dat > ./storage/output.dat
 ./progress
 
-./parsefish | Out-File ./logs/parsefish.log
+./parsefish > ./logs/parsefish.log
 ./progress
-
-exit
