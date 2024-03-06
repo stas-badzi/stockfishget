@@ -2,14 +2,17 @@
     #include <cstdlib>
     using namespace std;
     int main() {
+        cout << "launching program ...\n";
         system("bash ./stockfish-get/src/run-batch.bat");
         return 0;
     } 
 #else
-    #include <unistd.h>
+    #include <iostream>
+    #include <cstdlib>
     using namespace std;
     int main() {
-        execl("./stockfish-get/src/run-shell.sh","./stockfish-get/src/run-shell.sh",NULL);
+        cout << "launching program ...\n";
+        int out = system("bash ./stockfish-get/src/run-shell.sh");
         return 0;
     }
 #endif

@@ -4,7 +4,7 @@ g++ -o ./progress ./add_progress.cpp
 g++ -o ./runprogram ./program.cpp
 
 
-<#*****LOAD the programms**********#>
+#*****LOAD the programms**********#
 ./sendfish
 ./parsefish
 ./progress

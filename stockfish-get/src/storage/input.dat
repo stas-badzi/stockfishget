@@ -1,6 +1,0 @@
-uci
-isready
-ucinewgame
-setoption name multipv value 3
-position startpos
-eval

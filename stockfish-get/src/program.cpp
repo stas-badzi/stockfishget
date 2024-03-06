@@ -2,20 +2,22 @@
     #include <cstdlib>
     using namespace std;
     int main() {
-        system("bash ./program-windows.bat");
+        int out = system("bash ./program-windows.bat");
         return 0;        
     } 
 #elif __linux__
-    #include <unistd.h>
+    #include <cstdlib>
+    #include <iostream>
     using namespace std;
     int main() {
-        execl("./program-linux.sh","./program-linux.sh",NULL);
+        cout << "Linux!!!!!!!!!!!!!";
+        int out = system("bash ./program-linux.sh");
         return 0;
     }
 #elif __APPLE_
-    #include <unistd.h>
+    #include <cstdlib>
     int main() {
-        execl("./program-mac.sh","./program-mac.sh",NULL);
+        int out = system("bash ./program-mac.sh");
         return 0;
     }
 #else

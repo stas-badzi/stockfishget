@@ -1,13 +1,8 @@
-pwsh
-
-./sendfish | Out-File ./logs/sendfish.log
+./sendfish > ./logs/sendfish.log
 ./progress
 
-Get-Content ./storage/input.dat | ./stockfish-mac/stockfish | Out-File ./storage/output.dat
+./stockfish-mac/stockfish-arm64 < ./storage/input.dat > ./storage/output.dat
 ./progress
 
-
-./parsefish | Out-File ./logs/parsefish.log
+./parsefish > ./logs/parsefish.log
 ./progress
-
-exit

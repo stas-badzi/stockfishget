@@ -4,7 +4,9 @@
 #include <string>
 #include <algorithm>
 
-bool removeNull(string &edit) {
+using namespace std;
+
+bool removeNulls(string &edit) {
     int start = edit.size();
     for (int i = 0; i < edit.size(); ++i) {
         if (!isalpha(edit[i]) && !isdigit(edit[i]) && edit[i] != '/' && edit[i] != '-' && edit[i] != ' ' && edit[i] != '+' && edit[i] != '|' && edit[i] != '(' && edit[i] != ')' && edit[i] != ':' && edit[i] != '.') {
@@ -22,8 +24,6 @@ void removeSpaces(string &edit) {
     return;
 }
 
-using namespace std;
-
 int main() {
     ifstream fin;
     ofstream fout;
@@ -33,12 +33,12 @@ int main() {
 
     instring = "";
     getline(fin,instring);
-    bool remove_null = removeNull(instring);
+    bool remove_null = removeNulls(instring);
     bool remove_spaces = (instring[0] == ' ');
     cout << "remove null: " << remove_null << "\nremove spaces: " << remove_spaces << "\n";
     bool run = true;
     while (run) {
-        if (remove_null) {removeNull(instring);}
+        if (remove_null) {removeNulls(instring);}
         if (remove_spaces) {removeSpaces(instring);}
 
         cout << instring << "\n";

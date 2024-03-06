@@ -13,26 +13,36 @@
 
     using namespace std;
 
-    void runFile(char * file) {
-        system(file);
+    void runFile(string file) {
+        char[100] chfile;
+        for (int i = 0; i < file.size() && i < 100; ++i) {
+            chfile[i] == file[i];
+        }
+        system(chfile);
         return;
     }
 
-    void sleep(unsigned milliseconds) {
+    void sleepMiliseconds(unsigned milliseconds) {
         Sleep(milliseconds);
+        return;
     }
 #else
     #include <unistd.h>
 
     using namespace std;
 
-    void runFile(char * file) {
-        execl(file,file,NULL);
+    void runFile(string file) {
+        char chfile[100];
+        for (int i = 0; i < file.size() && i < 100; ++i) {
+            chfile[i] == file[i];
+        }
+        execl(chfile,chfile,NULL);
         return;
     }
     
-    void sleep(unsigned milliseconds) {
+    void sleepMiliseconds(unsigned milliseconds) {
         usleep(milliseconds * 1000); // takes microseconds
+        return;
     }
 #endif
 
@@ -57,12 +67,12 @@ int main() {
         return 0;
     }
 
-    time_t _tm =time(NULL );
+    time_t _tm = time(NULL);
     struct tm * curtime = localtime ( &_tm );
     cout << "\nLaunched: " << asctime(curtime) << "\n";
 
     while (run) {
-        sleep(1);
+        sleepMiliseconds(1);
 
         fin.open("../input.in");
         int action;
@@ -140,7 +150,7 @@ int main() {
 
                     runFile("./runprogram");
                     while (progress < 3) {
-                        sleep(1);
+                        sleepMiliseconds(1);
                         fin.open("./storage/progress.dat");
                         fin >> progress;
                         cout << progress;
@@ -206,7 +216,7 @@ int main() {
                     
                     runFile("./runprogram");
                     while (progress < 3) {
-                        sleep(1);
+                        sleepMiliseconds(1);
                         fin.open("./storage/progress.dat");
                         fin >> progress;
                         fin.close();

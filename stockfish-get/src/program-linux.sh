@@ -1,13 +1,16 @@
-pwsh
+echo Process:\n...
 
-./sendfish | Out-File ./logs/sendfish.log
+./sendfish > ./logs/sendfish.log
 ./progress
 
-Get-Content ./storage/input.dat | stockfish | Out-File ./storage/output.dat
+echo \n1...
+
+stockfish < ./storage/input.dat > ./storage/output.dat
 ./progress
 
+echo \n2...
 
-./parsefish | Out-File ./logs/parsefish.log
+./parsefish > ./logs/parsefish.log
 ./progress
 
-exit
+echo \n3\nFinished
