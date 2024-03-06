@@ -1,2 +1,2 @@
-stockfish-get/src/stockfish-mac/nn-0000000000a0.nnue filter=lfs diff=lfs merge=lfs -text
-stockfish-get/src/stockfish-windows/stockfish-windows-x86-64-avx2.exe filter=lfs diff=lfs merge=lfs -text
+stockfish-get/src/stockfish-mac/nn-0000000000a0.nnue filter=lfs diff=lfs merge=lfs -nnue
+stockfish-get/src/stockfish-windows/stockfish-windows-x86-64-avx2.exe filter=lfs diff=lfs merge=lfs -exe

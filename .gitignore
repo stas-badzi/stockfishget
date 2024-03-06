@@ -4,6 +4,8 @@
 *.dat
 *.log
 *.out
-*-arm64
-!stockfish-windows-x86-64-avx2.exe
-!stockfish-arm64
+#*-arm64
+stockfish-windows/
+stockfish-mac/
+#!stockfish-windows-x86-64-avx2.exe
+#!stockfish-arm64
