@@ -48,3 +48,6 @@ bash compile-program.sh
     Go to [link](https://github.com/stas-badzi/stockfishget/tree/macos)
 
     Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
+
+# README
+    this [file](https://github.com/stas-badzi/stockfishget/tree/macos/README.md)
