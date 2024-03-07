@@ -3,7 +3,7 @@
 Go to [link](https://github.com/stas-badzi/stockfishget/tree/main)
 
 Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/main.zip)
-    
+
 # COMPILING
 
 You have to compile, because compiling works diferntly on different systems.
@@ -33,22 +33,22 @@ bash compile-program.sh
 
 ## Windows
 
-    Go to [link](https://github.com/stas-badzi/stockfishget/tree/windows)
+Go to [link](https://github.com/stas-badzi/stockfishget/tree/windows)
 
-    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/windows.zip)
+Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/windows.zip)
 
 ## Linux
 
-    Go to [link](https://github.com/stas-badzi/stockfishget/tree/linux)
+Go to [link](https://github.com/stas-badzi/stockfishget/tree/linux)
 
-    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/linux.zip)
+Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/linux.zip)
 
 ## MacOS
 
-    Go to [link](https://github.com/stas-badzi/stockfishget/tree/macos)
+Go to [link](https://github.com/stas-badzi/stockfishget/tree/macos)
 
-    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
+Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
 
 # README
 
-this [file](https://github.com/stas-badzi/stockfishget/tree/macos/README.md)
+this [file](https://github.com/stas-badzi/stockfishget/tree/main/README.md)
