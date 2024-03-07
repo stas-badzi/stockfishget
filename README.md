@@ -50,4 +50,5 @@ bash compile-program.sh
     Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
 
 # README
-    this [file](https://github.com/stas-badzi/stockfishget/tree/macos/README.md)
+
+this [file](https://github.com/stas-badzi/stockfishget/tree/macos/README.md)
