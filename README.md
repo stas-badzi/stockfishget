@@ -1,4 +1,8 @@
-# stockfishget
+# UNCOMPILED
+
+Go to [link](https://github.com/stas-badzi/stockfishget/tree/main)
+
+Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/main.zip)
     
 # COMPILING
 
@@ -29,18 +33,22 @@ bash compile-program.sh
 
 ## Windows
 
-    Go to [Gihub](%path%/)
+    Go to [link](https://github.com/stas-badzi/stockfishget/tree/windows)
 
-    Dowload [zip]()
+    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/windows.zip)
 
 ## Linux
 
-    Go to [Gihub]()
+    Go to [link](https://github.com/stas-badzi/stockfishget/tree/linux)
 
-    Dowload [zip]()
+    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/linux.zip)
 
 ## MacOS
 
-    Go to [Gihub]()
+    Go to [link](https://github.com/stas-badzi/stockfishget/tree/macos)
 
-    Dowload [zip]()
+    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
+
+# README
+
+this [file](https://github.com/stas-badzi/stockfishget/tree/main/README.md)
