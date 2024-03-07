@@ -1,4 +1,4 @@
-# UNCOMILED
+# UNCOMPILED
     Go to [link](https://github.com/stas-badzi/stockfishget/tree/main)
     Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/main.zip)
     
