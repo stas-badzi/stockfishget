@@ -3,7 +3,7 @@
     # Files from build
     **/*.o
     **/*.s
-    src/.depend
+    src/code/stockfish/.depend
 
     # Built binary
     */stockfish*
@@ -14,15 +14,11 @@
 
 # other
 
-*/exec/*
-*.vscode
+.vscode
 
 */logs/*
 
-run
-run.exe
-run-arm64
-run-arm32
+run*
 
 */launch*
 */parsefish*
