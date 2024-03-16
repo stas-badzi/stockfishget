@@ -6,19 +6,24 @@
     src/.depend
 
     # Built binary
-    src/stockfish*
-    src/-lstdc++.res
+    */stockfish*
+    */-lstdc++.res
 
     # Neural network for the NNUE evaluation
     **/*.nnue
 
 # other
 
-*exec/*
-!*exec
+*/exec/*
 *.vscode
+
+*/logs/*
 
 run
 run.exe
 run-arm64
 run-arm32
+
+*/launch*
+*/parsefish*
+*/sendfish*
