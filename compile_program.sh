@@ -1,19 +1,20 @@
-cd ./stockfish-get/src/
+#!bin/bash
 
-bash ./build-stockfish.sh
+cd ./src/
 
-bash ./compile.sh > ../run.log
-g++ -O3 -o ./launch ./launcher.cpp
+if [ "$OSTYPE" == "linux-gnu" ]
+then
+    chmod -x ./scripts/build-stockfish.sh
+    chmod -x ./scripts/run.sh
+    chmod -x ./scripts/compile.sh
+fi
 
-cd ./stockfish/src/
-make -j profile-build ARCH=x86-64
+bash ./scripts/build-stockfish.sh
+
+bash ./scripts/compile.sh > ../null.log
+rm -f ../null.log
+
 cd ..
-cd ..
 
-# load programm
-cd ..
-./src/launch < ./src/storage/no.dat > ./run.log
-cd ..
-# ************
-
-g++ -O3 -o ./run ./stockfish-get/src/run.cpp
+rm -f ./run
+g++ -O3 -o ./run ./src/code/run.cpp

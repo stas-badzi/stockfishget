@@ -1,31 +1,78 @@
-# UNCOMPILED
+# UNCOMPILED version
 
-Go to [link](https://github.com/stas-badzi/stockfishget/tree/main)
+Go to [github/stockfishget/source](https://github.com/stas-badzi/stockfishget/tree/source)
 
-Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/main.zip)
-    
-# COMPILING
+Download [stockfishget-source.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/main.zip)
 
-You have to compile, because compiling works diferntly on different systems.
+# Compiling
+
+If compiling doesn't work use one of the compiled versions instead
 
 ## Requirements
 
-GCC -> [__site__](https://gcc.gnu.org/)
+### Linux
+
+#### G++
+
+```
+sudo apt install build-essential
+```
 
 ### Windows
 
-MSYS2 -> [__site__](https://www.msys2.org/)
+#### MSYS2
+
+[msys2](https://www.msys2.org/)
+
+#### G++
+
+[Installing c++/g++ on Windows](https://www3.cs.stonybrook.edu/~alee/g++/g++.html)
+
+__*or*__
+
+g++ with msys2 terminal
+```
+pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+```
 
 ### MacOS
 
-Xcode -> [__site__](https://developer.apple.com/xcode/)
+#### Xcode
+
+[app.store/xcode](https://developer.apple.com/xcode/)
+
+__*or*__
+
+in terminal
+```
+xcode-select --install
+```
+
+## Before compile
+
+### Linux
+
+```
+cd C:/path/to/folder/stockfishget-source/
+chmod -x compile-program.sh
+```
+
+### MacOS
+
+```
+cd C:/path/to/folder/stockfishget-source/
+chmod 755 compile-program.sh
+```
+
+### Windows
+
+```
+cd C:/path/to/folder/stockfishget-source/
+```
 
 ## Compile
 
-RUN IN TERMINAL
-
 ```
-cd C:/path/to/folder/stockfishget-main/
 bash compile-program.sh
 ```
 
@@ -33,22 +80,20 @@ bash compile-program.sh
 
 ## Windows
 
-    Go to [link](https://github.com/stas-badzi/stockfishget/tree/windows)
+Go to [github/stockfishget/windows](https://github.com/stas-badzi/stockfishget/tree/windows)
 
-    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/windows.zip)
+Download [stockfishget-windows.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/windows.zip)
 
 ## Linux
 
-    Go to [link](https://github.com/stas-badzi/stockfishget/tree/linux)
+Go to [github/stockfishget/linux](https://github.com/stas-badzi/stockfishget/tree/linux)
 
-    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/linux.zip)
+Download [stockfishget-linux.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/linux.zip)
 
 ## MacOS
 
-    Go to [link](https://github.com/stas-badzi/stockfishget/tree/macos)
+Go to [github/stockfishget/macos](https://github.com/stas-badzi/stockfishget/tree/macos)
 
-    Download [zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
+Download [stockfishget-macos.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
 
-# README
-
-this [file](https://github.com/stas-badzi/stockfishget/tree/main/README.md)
+# RUNNING the program
