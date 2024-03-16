@@ -12,6 +12,7 @@ g++ -o ../exec/sendfish ./send_stockfish.cpp
 g++ -o ../exec/parsefish ./parse_stockfish.cpp
 g++ -O3 -o ../exec/launch ./launcher.cpp
 
+mkdir ./exec/
 cd ../exec
 
 if [ "$OSTYPE" == "linux-gnu" ]
