@@ -4,9 +4,9 @@ cd ./src/
 
 if [ "$OSTYPE" == "linux-gnu" ]
 then
-    chmod -x ./scripts/build-stockfish.sh
-    chmod -x ./scripts/run.sh
-    chmod -x ./scripts/compile.sh
+    chmod +x ./scripts/build-stockfish.sh
+    chmod +x ./scripts/run.sh
+    chmod +x ./scripts/compile.sh
 fi
 
 bash ./scripts/build-stockfish.sh
@@ -18,3 +18,8 @@ cd ..
 
 rm -f ./run
 g++ -O3 -o ./run ./src/code/run.cpp
+
+if [ "$OSTYPE" == "linux-gnu" ]
+then
+    chmod +x ./run
+fi
