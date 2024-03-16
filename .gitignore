@@ -1,17 +1,24 @@
-*.exe
+# stockfish 
+
+    # Files from build
+    **/*.o
+    **/*.s
+    src/.depend
+
+    # Built binary
+    src/stockfish*
+    src/-lstdc++.res
+
+    # Neural network for the NNUE evaluation
+    **/*.nnue
+
+# other
+
+*exec/*
+!*exec
 *.vscode
-*.DS_Store
-*-arm64
-!*.cpp
 
-
-stockfish-get/src/parsefish
-stockfish-get/src/launch
-stockfish-get/src/progress
-stockfish-get/src/sendfish
-stockfish-get/src/runprogram
-stockfish-get/src/sendfish
 run
-
-#!stockfish-windows-x86-64-avx2.exe
-#!stockfish-arm64
+run.exe
+run-arm64
+run-arm32

@@ -1,0 +1,24 @@
+Here are all program logs since the last compile
+
+Launched: Sat Mar 16 18:38:40 2024
+
+Evaluation:
+	fen: rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1
+	
+
+	output:
+		0.12
+		0.15
+		
+Evaluation:
+	fen: rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1
+	moves
+		d7d5
+		e4e5
+		f7f5
+		e5f6
+
+	output:
+		-0.27
+		-0.35
+		
