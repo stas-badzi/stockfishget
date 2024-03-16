@@ -14,6 +14,13 @@ g++ -O3 -o ../exec/launch ./launcher.cpp
 
 cd ../exec
 
+if [ "$OSTYPE" == "linux-gnu" ]
+then
+    chmod +x ./sendfish
+    chmod +x ./parsefish
+    chmod +x ./launch
+fi
+
 #*****LOAD the programms**********#
 ./sendfish
 ./parsefish
