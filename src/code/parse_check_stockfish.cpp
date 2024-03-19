@@ -30,8 +30,13 @@ int main() {
     ofstream fout;
     int empty = 0;
     string instring;
+
     fin.open("./storage/output.dat");
-    fout.open("./storage/input.dat");
+    fout.open("./input.in",fstream::app);
+
+
+
+    bool moves = false;
 
     instring = "";
     getline(fin,instring);
@@ -57,33 +62,22 @@ int main() {
             //fout << instring;
         } else if (instring.rfind("info", 0) == 0) { // pos=0 limits the search to the prefix
             //fout << instring;
-        } else if (instring.rfind("NNUE evaluation", 0) == 0) { // pos=0 limits the search to the prefix
-            for (int i = 0; i < instring.size(); ++i) {
-                if (isdigit(instring[i]) || instring[i] == '-' || instring[i] == '.' || ( instring[i] == ' ' && isdigit(instring[i-1]) ) ) {
-                    if (instring[i] == ' ') {
-                        fout << "\n";
-                        cout << "\n";
-                    } else {
-                        fout << instring[i];
-                        cout << instring[i];
-                    }
-                }
+        } else if (instring.rfind("moves: ", 0) == 0) { // pos=0 limits the search to the prefix
+            moves = instring[7] == '1' ? true : false;
+        } else if (instring.rfind("bestmove", 0) == 0) { // pos=0 limits the search to the prefix
+            if (!moves) {
+                fout << " moves";
             }
-        } else if (instring.rfind("Final evaluation", 0) == 0) { // pos=0 limits the search to the prefix
-            if (instring.find("Final evaluation: none (in check)")) {
-                system("./exec/checkfish > ./logs/checkfish.log");
-                return 1;
+            fout << ' ';
+            int i = 8;
+            for (++i; i < instring.size() && instring[i] != ' '; i++) {
+                fout << instring[i];
             }
-            for (int i = 0; i < instring.size(); ++i) {
-                if ( (isdigit(instring[i]) || instring[i] == '-' || instring[i] == '.' || ( instring[i] == ' ' && isdigit(instring[i-1]) ) ) && i <= 40 ) {
-                    if (instring[i] == ' ') {
-                        fout << "\n";
-                        cout << "\n";
-                    } else {
-                        fout << instring[i];
-                        cout << instring[i];
-                    }
+            fout << ' ';
+            for (++i; i < instring.size() && instring[i] != ' '; i++) {
+                fout << instring[i];
             }
+            run = false;
         }
 
         
