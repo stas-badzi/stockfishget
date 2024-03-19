@@ -153,39 +153,35 @@ int main() {
                     cout << "\n" << flush;
                     fout.close();
 
-                    int progress = 0;
-                    fout.open("./storage/progress.dat");
-                    fout << "0";
-                    fout.close();
-
-                    fout.open("./input.in");
-                    fout << '0';
-                    fout.close();
-
                     system("./exec/sendfish > ./logs/sendfish.log");
                     system("./code/stockfish/stockfish < ./storage/input.dat > ./storage/output.dat");
-                    system("./exec/parsefish > ./logs/parsefish.log");
+                    int out = system("./exec/parsefish > ./logs/parsefish.log");
                     
+                    if (out == 0) {
+                        fout.open("./input.in");
+                        fout << '0';
+                        fout.close();
 
-                    fout.open("./output.out");
-                    fout << "1";
-                    cout << "\n\toutput:";
+                        fout.open("./output.out");
+                        fout << "1";
+                        cout << "\n\toutput:";
 
-                    fin.open("./storage/input.dat");
+                        fin.open("./storage/input.dat");
 
-                    string value;
+                        string value;
 
-                    do {
-                        value.clear();
-                        fin >> value;
-                        fout << "\n" << value;
-                        cout << "\n\t\t" << value;
-                    } while (value.size() > 0);
+                        do {
+                            value.clear();
+                            fin >> value;
+                            fout << "\n" << value;
+                            cout << "\n\t\t" << value;
+                        } while (value.size() > 0);
 
-                    fin.close();
+                        fin.close();
 
-                    cout << "\n" << flush;
-                    fout.close();
+                        cout << "\n" << flush;
+                        fout.close();
+                    }
 
                 } else if (subcommand == "startpos") {
 
@@ -225,40 +221,36 @@ int main() {
                     }
                     cout << "\n" << flush;
                     fout.close();
-
-                    int progress = 0;
-                    fout.open("./storage/progress.dat");
-                    fout << "0";
-                    fout.close();
-
-                    fout.open("./input.in");
-                    fout << '0';
-                    fout.close();
                     
                     system("./exec/sendfish > ./logs/sendfish.log");
                     system("./code/stockfish/stockfish < ./storage/input.dat > ./storage/output.dat");
-                    system("./exec/parsefish > ./logs/parsefish.log");
+                    int out = system("./exec/parsefish > ./logs/parsefish.log");
                     
+                    if (out == 0) {
+                        fout.open("./input.in");
+                        fout << '0';
+                        fout.close();
 
-                    fout.open("./output.out");
-                    fout << "1";
-                    cout << "\n\toutput:";
+                        fout.open("./output.out");
+                        fout << "1";
+                        cout << "\n\toutput:";
 
-                    fin.open("./storage/input.dat");
+                        fin.open("./storage/input.dat");
 
-                    string value;
+                        string value;
 
-                    do {
-                        value.clear();
-                        fin >> value;
-                        fout << "\n" << value;
-                        cout << "\n\t\t" << value;
-                    } while (value.size() > 0);
+                        do {
+                            value.clear();
+                            fin >> value;
+                            fout << "\n" << value;
+                            cout << "\n\t\t" << value;
+                        } while (value.size() > 0);
 
-                    fin.close();
+                        fin.close();
 
-                    cout << "\n" << flush;
-                    fout.close();
+                        cout << "\n" << flush;
+                        fout.close();
+                    }
 
                 } else {
                     fout.open("./input.in");

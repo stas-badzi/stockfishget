@@ -48,7 +48,12 @@ int main() {
             fout << " " << move;
             cout << "\n\t" << move;
         }
-        fout << "\neval";
+        fout << "\ngo depth 10";
+        fout.close();
+
+        fout.open("storage/output.dat");
+        fout << "moves: " << (n > 0) << "\n";
+        fout.close();
     }
     if (t == 1) {
         string fen;
@@ -103,7 +108,12 @@ int main() {
             cout << "\n\t" << move1 << " " << move2;
         }
 
-        fout << "\neval";
+        fout << "\ngo depth 10";
+        fout.close();
+
+        fout.open("storage/output.dat");
+        fout << "moves: " << (n > 0) << "\n";
+        fout.close();
     }
     fin.close();
 
