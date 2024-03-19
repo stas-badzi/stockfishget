@@ -83,6 +83,7 @@ int main() {
                         fout << instring[i];
                         cout << instring[i];
                     }
+                }
             }
         }
 

@@ -6,6 +6,9 @@ cd ./exec/
 rm -f ./sendfish
 rm -f ./parsefish
 rm -f ./launch
+rm -f ./sendcheckfish
+rm -f ./parsecheckfish
+rm -f ./checkfish
 
 cd ../code/
 
@@ -46,6 +49,8 @@ fi
 ./sendfish
 ./parsefish
 ./launch < ../storage/no.dat > ../run.log
+
+rm -f input.in
 
 cd ..
 
