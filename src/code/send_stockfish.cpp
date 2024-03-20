@@ -86,7 +86,6 @@ int main() {
         removeNull(fen);
 
         if (fen[0] == ' ' || fen[1] == ' ') {removeSpaces(fen);}
-        fout.open("./storage/input.dat");
         fout << "uci\nisready\nucinewgame\nsetoption name Debug Log File value ./logs/stockfish.log\nposition fen " << fen;
         cout << "fen: " << fen;
 
@@ -105,6 +104,7 @@ int main() {
 
         fout << "\neval";
     }
+    fout.close();
     fin.close();
 
     cout << "\n";

@@ -70,8 +70,8 @@ int main() {
                 }
             }
         } else if (instring.rfind("Final evaluation", 0) == 0) { // pos=0 limits the search to the prefix
-            if (instring.find("Final evaluation: none (in check)")) {
-                system("./exec/checkfish > ./logs/checkfish.log");
+            if (instring.find("Final evaluation: none (in check)", 0) == 0) {
+                int out = system("./exec/checkfish > ./logs/checkfish.log");
                 return 1;
             }
             for (int i = 0; i < instring.size(); ++i) {

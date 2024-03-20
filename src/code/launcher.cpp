@@ -153,9 +153,11 @@ int main() {
                     cout << "\n" << flush;
                     fout.close();
 
-                    system("./exec/sendfish > ./logs/sendfish.log");
-                    system("./code/stockfish/stockfish < ./storage/input.dat > ./storage/output.dat");
-                    int out = system("./exec/parsefish > ./logs/parsefish.log");
+                    int out;
+
+                    out = system("./exec/sendfish > ./logs/sendfish.log");
+                    out = system("./code/stockfish/stockfish < ./storage/input.dat > ./storage/output.dat");
+                    out = system("./exec/parsefish > ./logs/parsefish.log");
                     
                     if (out == 0) {
                         fout.open("./input.in");
@@ -181,6 +183,21 @@ int main() {
 
                         cout << "\n" << flush;
                         fout.close();
+                    } else {
+                        cout << "\n\tmove:";
+
+                        string value;
+                        fin.open("./storage/input.dat");
+
+                        do {
+                            value.clear();
+                            fin >> value;
+                            cout << "\n\t\t" << value;
+                        } while (value.size() > 0);
+
+                        fin.close();
+
+                        cout << "\n" << flush;
                     }
 
                 } else if (subcommand == "startpos") {
@@ -222,9 +239,10 @@ int main() {
                     cout << "\n" << flush;
                     fout.close();
                     
-                    system("./exec/sendfish > ./logs/sendfish.log");
-                    system("./code/stockfish/stockfish < ./storage/input.dat > ./storage/output.dat");
-                    int out = system("./exec/parsefish > ./logs/parsefish.log");
+                    int out;
+                    out = system("./exec/sendfish > ./logs/sendfish.log");
+                    out = system("./code/stockfish/stockfish < ./storage/input.dat > ./storage/output.dat");
+                    out = system("./exec/parsefish > ./logs/parsefish.log");
                     
                     if (out == 0) {
                         fout.open("./input.in");
@@ -250,6 +268,21 @@ int main() {
 
                         cout << "\n" << flush;
                         fout.close();
+                    } else {
+                        cout << "\n\tmove:";
+                        string value;
+
+                        fin.open("./storage/input.dat");
+
+                        do {
+                            value.clear();
+                            fin >> value;
+                            cout << "\n\t\t" << value;
+                        } while (value.size() > 0);
+
+                        fin.close();
+
+                        cout << "\n" << flush;
                     }
 
                 } else {

@@ -113,9 +113,10 @@ int main() {
                 cout << "\n" << flush;
                 fout.close();
 
-                system("./exec/sendcheckfish > ./logs/sendcheckfish.log");
-                system("./code/stockfish/stockfish < ./storage/input.dat >> ./storage/output.dat");
-                int out = system("./exec/parsecheckfish > ./logs/parsecheckfish.log");
+                int out;
+                out = system("./exec/sendcheckfish > ./logs/sendcheckfish.log");
+                out = system("./code/stockfish/stockfish < ./storage/input.dat >> ./storage/output.dat");
+                out = system("./exec/parsecheckfish > ./logs/parsecheckfish.log");
 
                 fout.open("./input.in");
                 fout << '0';
@@ -159,10 +160,11 @@ int main() {
                 }
                 cout << "\n" << flush;
                 fout.close();
-        
-                system("./exec/sendcheckfish > ./logs/sendcheckfish.log");
-                system("./code/stockfish/stockfish < ./storage/input.dat >> ./storage/output.dat");
-                int out = system("./exec/parsecheckfish > ./logs/parsecheckfish.log");
+
+                int out;
+                out = system("./exec/sendcheckfish > ./logs/sendcheckfish.log");
+                out = system("./code/stockfish/stockfish < ./storage/input.dat >> ./storage/output.dat");
+                out = system("./exec/parsecheckfish > ./logs/parsecheckfish.log");
 
             }
         }

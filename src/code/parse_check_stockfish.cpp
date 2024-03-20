@@ -77,6 +77,18 @@ int main() {
             for (++i; i < instring.size() && instring[i] != ' '; i++) {
                 fout << instring[i];
             }
+            fout.close();
+
+            fout.open("storage/input.dat");
+            i = 8;
+            for (++i; i < instring.size() && instring[i] != ' '; i++) {
+                fout << instring[i];
+            }
+            fout << '\n';
+            for (++i; i < instring.size() && instring[i] != ' '; i++) {
+                fout << instring[i];
+            }
+
             run = false;
         }
 
