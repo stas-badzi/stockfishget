@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <cmath>
 #include <algorithm>
 #include <cstdlib>
 
@@ -55,23 +56,54 @@ int main() {
             //fout << instring;
         } else if (instring.rfind("ready", 0) == 0) { // pos=0 limits the search to the prefix
             //fout << instring;
-        } else if (instring.rfind("info", 0) == 0) { // pos=0 limits the search to the prefix
-            //fout << instring;
-        } else if (instring.rfind("NNUE evaluation", 0) == 0) { // pos=0 limits the search to the prefix
-            for (int i = 0; i < instring.size(); ++i) {
-                if (isdigit(instring[i]) || instring[i] == '-' || instring[i] == '.' || ( instring[i] == ' ' && isdigit(instring[i-1]) ) ) {
-                    if (instring[i] == ' ') {
-                        fout << "\n";
-                        cout << "\n";
+        } else if (instring.rfind("info string", 0) == 0) { // pos=0 limits the search to the prefix
+            //cout << instring;
+        } else if (instring.rfind("info depth 10", 0) == 0) { // pos=0 limits the search to the prefix
+            long int i = instring.rfind("score cp", instring.size());
+            cout << "\n" << i << "\n";
+            if (i < 0) {
+                i = instring.rfind("score mate", instring.size());
+                cout << i << "\n";
+                if (i >= 0) {
+                    while (!isdigit(instring[i])) {++i;}
+                    if (instring[ i-1 ] == '-') {
+                        fout << '#-';
+                        cout << "M-";
                     } else {
-                        fout << instring[i];
-                        cout << instring[i];
+                        fout << "#";
+                        cout << "M";
+                    }
+                    for (int j = i; j < instring.size(); ++j) {
+                        if (isdigit(instring[j])) {
+                            fout << instring[j];
+                            cout << instring[j];
+                        } else {
+                            break;
+                        }
                     }
                 }
+            } else {
+                while (!isdigit(instring[i])) {++i;}
+                if (instring[ i-1 ] == '-') {
+                    fout << '-';
+                    cout << "-";
+                }
+                double value = 0;
+                for (int j = i; j < instring.size(); ++j) {
+                    if (isdigit(instring[j])) {
+                        value *= 10;
+                        value += instring[j] - '0';
+                        cout << instring[j];
+                    } else {
+                        break;
+                    }
+                }
+                value /= 100;
+                fout << value;
             }
-        } else if (instring.rfind("Final evaluation", 0) == 0) { // pos=0 limits the search to the prefix
-            if (instring.find("Final evaluation: none (in check)")) {
-                system("./exec/checkfish > ./logs/checkfish.log");
+        }/* else if (instring.rfind("Final evaluation", 0) == 0) { // pos=0 limits the search to the prefix
+            if (instring.find("Final evaluation: none (in check)", 0) == 0) {
+                int out = system("./exec/checkfish > ./logs/checkfish.log");
                 return 1;
             }
             for (int i = 0; i < instring.size(); ++i) {
@@ -83,15 +115,16 @@ int main() {
                         fout << instring[i];
                         cout << instring[i];
                     }
+                }
             }
-        }
+        }*/
 
         
         instring = "";
         getline(fin,instring);
         if (instring.size() <= 0) {
             ++empty;
-            if (empty > 2) {
+            if (empty > 3) {
                 run = false;
             }
         } else {

@@ -7,11 +7,14 @@ then
     cd ./code/stockfish/
 
     make -j profile-build ARCH=x86-64-avx2
+    chmod +x ./stockfish
 
     cd ..
     cd ../scripts/
 
     cd ..
+
+    
 
     exit 0
 
@@ -22,6 +25,7 @@ then
     cd ./code/stockfish/
 
     make -j profile-build ARCH=x86-64-avx2
+    chmod +x ./stockfish
 
     cd ..
     cd ../scripts/
@@ -84,6 +88,7 @@ then
     make clean
     make build
     make net
+    chmod 755 ./stockfish
     
     cd ..
     cd ..

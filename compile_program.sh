@@ -16,7 +16,8 @@ fi
 
 bash ./scripts/build-stockfish.sh > ../null.log
 
-bash ./scripts/compile.sh > ../null.log
+bash ./scripts/compile.sh >> ../null.log
+
 rm -f ../null.log
 
 cd ..

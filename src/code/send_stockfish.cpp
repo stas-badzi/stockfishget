@@ -34,7 +34,7 @@ int main() {
     cout << "action: " << t << "\n";
     fout.open("./storage/input.dat");
     if (t == 0) {
-        fout << "uci\nisready\nucinewgame\nsetoption name Debug Log File value ./logs/stockfish.log\nposition startpos";
+        fout << "uci\nisready\nucinewgame\nposition startpos";
         cout << "startpos";
 
         if (n > 0) {
@@ -48,7 +48,7 @@ int main() {
             fout << " " << move;
             cout << "\n\t" << move;
         }
-        fout << "\neval";
+        fout << "\ngo depth 10\nsetoption name Debug Log File value ./logs/stockfish.log\neval\n";
     }
     if (t == 1) {
         string fen;
@@ -86,8 +86,7 @@ int main() {
         removeNull(fen);
 
         if (fen[0] == ' ' || fen[1] == ' ') {removeSpaces(fen);}
-        fout.open("./storage/input.dat");
-        fout << "uci\nisready\nucinewgame\nsetoption name Debug Log File value ./logs/stockfish.log\nposition fen " << fen;
+        fout << "uci\nisready\nucinewgame\nposition fen " << fen;
         cout << "fen: " << fen;
 
         if (n > 0) {
@@ -96,15 +95,15 @@ int main() {
         }
         
         for (int i = 0; i < n; ++i) {
-            string move1,move2;
-            fin >> move1;
-            fin >> move2;
-            fout << " " << move1 << " " << move2;
-            cout << "\n\t" << move1 << " " << move2;
+           string move;
+            fin >> move;
+            fout << " " << move;
+            cout << "\n\t" << move;
         }
 
-        fout << "\neval";
+        fout << "\ngo depth 10\nsetoption name Debug Log File value ./logs/stockfish.log\neval\n";
     }
+    fout.close();
     fin.close();
 
     cout << "\n";

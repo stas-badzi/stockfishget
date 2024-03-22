@@ -1,22 +1,3 @@
-# stockfish 
-
-    # Files from build
-    **/*.o
-    **/*.s
-    src/code/stockfish/.depend
-
-    # Built binary
-    */stockfish*
-    */-lstdc++.res
-
-    # Neural network for the NNUE evaluation
-    **/*.nnue
-
-# other
-
 .vscode
 
 */logs/*
-*/exec/*
-
-run*
