@@ -1,5 +1,9 @@
-# Latest Release
-    __v1.2.2__
+# This Version
+
+### __Stockfish Get v1.2.2__
+
+# 
+# 
 
 # UNCOMPILED version
 
@@ -79,6 +83,9 @@ cd C:/path/to/folder/stockfishget-source/
 bash compile-program.sh
 ```
 
+# 
+# 
+
 # COMPILED versions
 
 ## Windows
@@ -98,5 +105,8 @@ Download [stockfishget-linux.zip](https://github.com/stas-badzi/stockfishget/arc
 Go to [github.com/stas-badzi/stockfishget/macos](https://github.com/stas-badzi/stockfishget/tree/macos)
 
 Download [stockfishget-macos.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/macos.zip)
+
+# 
+# 
 
 # RUNNING the program
