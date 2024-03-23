@@ -67,11 +67,11 @@ int main() {
                 if (i >= 0) {
                     while (!isdigit(instring[i])) {++i;}
                     if (instring[ i-1 ] == '-') {
-                        fout << '#-';
-                        cout << "M-";
+                        fout << "#-";
+                        cout << "-M";
                     } else {
-                        fout << "#";
-                        cout << "M";
+                        fout << '#';
+                        cout << 'M';
                     }
                     for (int j = i; j < instring.size(); ++j) {
                         if (isdigit(instring[j])) {
