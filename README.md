@@ -1,3 +1,6 @@
+# Latest Release
+    __v1.2.2__
+
 # UNCOMPILED version
 
 Go to [github.com/stas-badzi/stockfishget/source](https://github.com/stas-badzi/stockfishget/tree/source)
