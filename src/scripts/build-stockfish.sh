@@ -71,9 +71,20 @@ then
 
     cd ./code/stockfish/
     
-    C:/msys64/mingw64 make -j build ARCH=x86-64
-    #--- if you have x32 add command below and reomove the line above ---
-    #C:/msys64/mingw32 make -j build ARCH=x86-32
+    make -j build ARCH=x86-64
+
+    cd ..
+    cd ..
+
+    exit 0
+
+elif  [ "$OSTYPE" == "msys" ]
+then
+    echo msys
+
+    cd ./code/stockfish/
+    
+    make -j build ARCH=x86-64
 
     cd ..
     cd ..

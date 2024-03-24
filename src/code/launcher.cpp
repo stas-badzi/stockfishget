@@ -91,27 +91,27 @@ int main() {
 
                     // turn
                     fin >> input;
-                    fen.push_back(' ');
+                    fen += ' ';
                     fen += input;
 
                     // castles
                     fin >> input;
-                    fen.push_back(' ');
+                    fen += ' ';
                     fen += input;
                     
                     // en passaunt
                     fin >> input;
-                    fen.push_back(' ');
+                    fen += ' ';
                     fen += input;
                     
                     // no capture & pawn move counter
                     fin >> input;
-                    fen.push_back(' ');
+                    fen += ' ';
                     fen += input;
 
                     // black turn counter
                     fin >> input;
-                    fen.push_back(' ');
+                    fen += ' ';
                     fen += input;
 
                     removeNull(fen);
@@ -173,7 +173,7 @@ int main() {
                         string value;
 
                         do {
-                            value.clear();
+                            value = "";
                             fin >> value;
                             fout << "\n" << value;
                             cout << "\n\t\t" << value;
@@ -190,7 +190,7 @@ int main() {
                         fin.open("./storage/input.dat");
 
                         do {
-                            value.clear();
+                            value = "";
                             fin >> value;
                             cout << "\n\t\t" << value;
                         } while (value.size() > 0);
@@ -258,7 +258,7 @@ int main() {
                         string value;
 
                         do {
-                            value.clear();
+                            value = "";
                             fin >> value;
                             fout << "\n" << value;
                             cout << "\n\t\t" << value;
@@ -275,7 +275,7 @@ int main() {
                         fin.open("./storage/input.dat");
 
                         do {
-                            value.clear();
+                            value = "";
                             fin >> value;
                             cout << "\n\t\t" << value;
                         } while (value.size() > 0);

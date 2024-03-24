@@ -1,7 +1,7 @@
 #!bin/bash
 
 cd ./src/
-mkdir ./logs/
+mkdir -p ./logs
 
 ./exec/launch < ./storage/yes.dat >> ./run.log
 cd ..

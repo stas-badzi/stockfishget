@@ -1,6 +1,7 @@
 #!bin/bash
 
-mkdir ./exec/
+mkdir -p ./exec/
+
 cd ./exec/
 
 rm -f ./sendfish

@@ -60,27 +60,27 @@ int main() {
 
         // turn
         fin >> input;
-        fen.push_back(' ');
+        fen += ' ';
         fen += input;
 
         // castles
         fin >> input;
-        fen.push_back(' ');
+        fen += ' ';
         fen += input;
                     
         // en passaunt
         fin >> input;
-        fen.push_back(' ');
+        fen += ' ';
         fen += input;
                     
         // no capture & pawn move counter
         fin >> input;
-        fen.push_back(' ');
+        fen += ' ';
         fen += input;
 
         // black turn counter
         fin >> input;
-        fen.push_back(' ');
+        fen += ' ';
         fen += input;
 
         removeNull(fen);
