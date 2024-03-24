@@ -1,6 +1,6 @@
 # This Version
 
-### __Stockfish Get compiled for windows v1.2.2__
+### __Stockfish Get compiled for windows v1.2.3__
 
 # 
 # 
