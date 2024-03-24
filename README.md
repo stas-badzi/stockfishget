@@ -9,17 +9,33 @@
 
 Go to [github.com/stas-badzi/stockfishget/source](https://github.com/stas-badzi/stockfishget/tree/source)
 
-Download [stockfishget-source.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/main.zip)
+Download [stockfishget-source.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/source.zip)
 
 # Compiling
 
-If compiling doesn't work use one of the compiled versions instead
+__If compiling doesn't work use one of the compiled versions instead__
+
+## Stockfish
+
+__if compiling stockfish doesn't work (MakeFile errors)__
+
+### Download stockfish
+
+Go to [github.com/stas-badzi/stockfishget/stockfish](https://github.com/stas-badzi/stockfishget/tree/stockfish)
+
+Download [stockfishget-stockfish.zip](https://github.com/stas-badzi/stockfishget/archive/refs/heads/stockfish.zip)
+
+### Replace the stockfishget/src/code/stockfish folder with the downloaded one for your operating system
 
 ## Requirements
 
+__You can install these programs in any way you want__
+
+__The methods below are only examples__
+
 ### Linux
 
-#### G++
+#### G++ and Make
 
 ```
 sudo apt install build-essential
@@ -27,20 +43,13 @@ sudo apt install build-essential
 
 ### Windows
 
-#### MSYS2
+#### Make
 
-[msys2](https://www.msys2.org/)
+[Make for Windows](https://gnuwin32.sourceforge.net/packages/make.htm)
 
 #### G++
 
 [Installing c++/g++ on Windows](https://www3.cs.stonybrook.edu/~alee/g++/g++.html)
-
-__*or*__
-
-g++ with msys2 terminal
-```
-pacman -S --needed base-devel mingw-w64-x86_64-toolchain
-```
 
 ### MacOS
 
