@@ -44,8 +44,7 @@ then
 
     cd ./code/stockfish/
     
-    C:/msys64/mingw32 make -j build ARCH=x86-32
-    #C:/msys32/mingw32 make -j build ARCH=x86-32
+    make -j build ARCH=x86-32
 
     cd ..
     cd ..
@@ -58,7 +57,7 @@ then
 
     cd ./code/stockfish/
     
-    C:/msys64/mingw64 make -j build ARCH=x86-64
+    make -j build ARCH=x86-64
 
     cd ..
     cd ..
