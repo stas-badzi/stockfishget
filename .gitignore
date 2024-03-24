@@ -1,17 +1,3 @@
-*.exe
-*.vscode
-*.DS_Store
-*-arm64
-!*.cpp
+.vscode/*
 
-
-stockfish-get/src/parsefish
-stockfish-get/src/launch
-stockfish-get/src/progress
-stockfish-get/src/sendfish
-stockfish-get/src/runprogram
-stockfish-get/src/sendfish
-run
-
-#!stockfish-windows-x86-64-avx2.exe
-#!stockfish-arm64
+*/logs/*
