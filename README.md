@@ -1,6 +1,6 @@
 # This Version
 
-### __Stockfish Get v1.2.3__
+### __Stockfish compiled v16.1__
 
 # 
 # 
